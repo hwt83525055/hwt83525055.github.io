@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Django,Python," />
 
 
 
@@ -111,20 +111,18 @@
 
 
 
-<meta name="description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
-<meta name="keywords" content="Linux">
+<meta name="description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
+<meta name="keywords" content="Django,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux crontab 详解">
-<meta property="og:url" content="http://yoursite.com/2017/04/26/Linux-crontab-详解/index.html">
+<meta property="og:title" content="Django中有关视图类的多种写法">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/index.html">
 <meta property="og:site_name" content="My own site">
-<meta property="og:description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
+<meta property="og:description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg">
-<meta property="og:updated_time" content="2017-10-30T14:51:10.377Z">
+<meta property="og:updated_time" content="2017-10-30T15:22:43.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux crontab 详解">
-<meta name="twitter:description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg">
+<meta name="twitter:title" content="Django中有关视图类的多种写法">
+<meta name="twitter:description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
 
 
 
@@ -154,13 +152,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/26/Linux-crontab-详解/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/"/>
 
 
 
 
 
-  <title>Linux crontab 详解 | My own site</title>
+  <title>Django中有关视图类的多种写法 | My own site</title>
   
 
 
@@ -297,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/Linux-crontab-详解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Funnnnnny">
@@ -314,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux crontab 详解</h1>
+          <h1 class="post-title" itemprop="name headline">Django中有关视图类的多种写法</h1>
         
 
         <div class="post-meta">
@@ -326,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T16:02:27+09:00">
-                2017-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T23:35:51+09:00">
+                2017-06-28
               </time>
             
 
@@ -364,14 +362,32 @@
       
 
       
-        <h4 id="欢迎大家加我的微信"><a href="#欢迎大家加我的微信" class="headerlink" title="欢迎大家加我的微信"></a>欢迎大家加我的微信</h4><p>因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cron status</div></pre></td></tr></table></figure>
-<p>查询当前crontab的运行状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ crontab -e</div><div class="line">$ crontab -l</div><div class="line">$ crontab -r</div></pre></td></tr></table></figure></p>
-<p>这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分<br><img src="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg" alt="Aaron Swartz"><br>可以看到crontab-edit中的每一行记录由以下几个部分组成</p>
-<h4 id="分钟-小时-日期-周-Act"><a href="#分钟-小时-日期-周-Act" class="headerlink" title="分钟 小时 日期 周 Act"></a>分钟 小时 日期 周 Act</h4><p> 这个应该很好理解， 即在某日期周几某小时某分钟 执行某操作,值得注意的是一般在command中我们需要使用的是绝对地址<br> | 字段名称        | 说明         | 取值范围  |<br>|:—|:—:|:—:|<br>| 分钟      | 每小时的第几分钟执行 | 0-59 |<br>| 小时    | 每日的第几个小时执行 |0-23|<br>| 日期 | 每月的第几天执行 | 1-31 |<br>|月历 |每年的第几月执行|1-12|<br>|星期|每周的第几天执行|0-6|</p>
-<h3 id="特殊的字符含义"><a href="#特殊的字符含义" class="headerlink" title="特殊的字符含义"></a>特殊的字符含义</h3><p>在crontab中常用的几个特殊字符<br>| 字段名称        | 说明    |<br>|:—:|:—:|<br>|s| 表示任何时刻|<br>|-|表示一个段|<br>|,|表示分割|<br>|/n|表示每个n的单位执行一次，可以写成1-23/1.|</p>
-<h3 id="服务的启动"><a href="#服务的启动" class="headerlink" title="服务的启动"></a>服务的启动</h3><p>想控制crontab的运行状态依靠以下几个命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">service cron start</div><div class="line">service cron stop</div><div class="line">service cron restart</div></pre></td></tr></table></figure></p>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>有关crontab的log一般都存储在/var/log/cron.log 这个文件里，自行查看即可</p>
+        <p>在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。</p>
+<h2 id="第一种-以方法为基础实现的视图"><a href="#第一种-以方法为基础实现的视图" class="headerlink" title="第一种 以方法为基础实现的视图"></a>第一种 以方法为基础实现的视图</h2><p>举个例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">r'^welcome/$'</span>, views.welcome, name=<span class="string">"welcome"</span>)</div></pre></td></tr></table></figure></p>
+<p>这是一行url视图函数，那么在views找一下这个welcome的方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">welcome</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'welcome.html'</span>)</div></pre></td></tr></table></figure></p>
+<p>这里返回了一个render，启动服务之后可以看见返回的是welcome.html的页面<br>复杂一点，如何去实现某些功能或是请求呢？例如实现一个接口函数。看下面的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">r'^form/$'</span>, views.formmanage, name=<span class="string">"formmanage"</span>),</div></pre></td></tr></table></figure>
+<p>同样寻找一下他的views函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">activity = Activity_act()</div><div class="line">uid = request.session[<span class="string">'login'</span>]</div><div class="line">form = activity.allActivity()</div><div class="line"><span class="keyword">return</span> render(request, <span class="string">'adminapp/biaodan-list.html'</span>,</div><div class="line">              &#123;<span class="string">"activity"</span>: form,&#125;)</div></pre></td></tr></table></figure></p>
+<p>上图中的Activity_act是一个方法包中的某个方法，从返回值可以看出返回了form并将form传递在了render中，那么我们在调用网页的时候就可以通过template语句去调用form，具体的template的写法可以见其他文章，这就是一个以方法为基础实现的网页架构</p>
+<p>下面我们再看看第二种写法</p>
+<h2 id="第二种-基于视图View本身的写法"><a href="#第二种-基于视图View本身的写法" class="headerlink" title="第二种 基于视图View本身的写法"></a>第二种 基于视图View本身的写法</h2><p><a href="https://docs.djangoproject.com/en/dev/ref/class-based-views/base/" target="_blank" rel="external">Django官方文档</a></p>
+<p>在文档中介绍了以下几种View</p>
+<p>View</p>
+<blockquote>
+<p>View是一种基础视图，常见写法为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyView</span><span class="params">(View)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, request, *args, **kwargs)</span>:</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">'Hello, World!'</span>)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>在url中的话这种实现通过View的as_view()函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">'^myview'</span>, Myview.as_view(), name=<span class="string">'我的视图'</span>)</div></pre></td></tr></table></figure></p>
+<p>另外在View中提供了几个配置用的函数，在连接中有详解，这里就不细说了<br>当对myview进行get请求时就会返回Hello World的http形式的response<br>那么在django中他已经为我们封装好了其他许多好用的视图</p>
+<p>Template_View</p>
+<blockquote>
+<p>Template_View顾名思义是一种模板类的视图，常见写法为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.views.generic.base <span class="keyword">import</span> TemplateView</div><div class="line"></div><div class="line"><span class="keyword">from</span> articles.models <span class="keyword">import</span> Article</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomePageView</span><span class="params">(TemplateView)</span>:</span></div><div class="line"></div><div class="line">    template_name = <span class="string">"home.html"</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_context_data</span><span class="params">(self, **kwargs)</span>:</span></div><div class="line">        context = super().get_context_data(**kwargs)</div><div class="line">        context[<span class="string">'latest_articles'</span>] = Article.objects.all()[:<span class="number">5</span>]</div><div class="line">        <span class="keyword">return</span> context</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>依次看一下代码，首先template_name就是模板的名字，也就会在当前项目的statics下找到home.html进行直接渲染，不需要我们去返回某个render对网页进行渲染，接下来的get_context_data则是一个获取属性值的方法，同样只需要写个方法就可以在前端页面中自动获取到context这个属性值，是不是特别的方便呢？当然了，Template是继承于View的方法，所以所有View的配置他也可以使用</p>
+<p>RedirectView</p>
+<blockquote>
+<p>RedirectView是一种重定向用的视图，暂时还没有用到，所以先不提，之后补充一下有关View的几种配置方法与特殊的写法</p>
+</blockquote>
+<p><font size="15">Thanks</font></p>
 
       
     </div>
@@ -397,7 +413,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/Django/" rel="tag"># Django</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -410,15 +428,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/27/Docker/" rel="next" title="Docker Cloud9">
+                <i class="fa fa-chevron-left"></i> Docker Cloud9
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/27/Docker/" rel="prev" title="Docker Cloud9">
-                Docker Cloud9 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#欢迎大家加我的微信"><span class="nav-number">1.</span> <span class="nav-text">欢迎大家加我的微信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分钟-小时-日期-周-Act"><span class="nav-number">2.</span> <span class="nav-text">分钟 小时 日期 周 Act</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊的字符含义"><span class="nav-number"></span> <span class="nav-text">特殊的字符含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务的启动"><span class="nav-number"></span> <span class="nav-text">服务的启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number"></span> <span class="nav-text">日志</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一种-以方法为基础实现的视图"><span class="nav-number">1.</span> <span class="nav-text">第一种 以方法为基础实现的视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二种-基于视图View本身的写法"><span class="nav-number">2.</span> <span class="nav-text">第二种 基于视图View本身的写法</span></a></li></ol></div>
             
 
           </div>
