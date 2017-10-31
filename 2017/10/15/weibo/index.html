@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Django,Python," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -111,18 +111,20 @@
 
 
 
-<meta name="description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
-<meta name="keywords" content="Django,Python">
+<meta name="description" content="恩，慢慢更新，先挖个坑写这个的主要原因是自己的微博被许多卖片的小姐姐们关注了，很恶心，准备一次清理掉  账号密码首先还是老样子，分析一下网站对账号密码的加密操作  老规矩，能从移动端入手就不从PC端入手，但是这次直接从PC入手，手机版微博 当输入完账号按下tab切到密码框时，我们会捕捉到一个get请求，打开看看 https://login.sina.com.cn/sso/prelogin.php?">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django中有关视图类的多种写法">
-<meta property="og:url" content="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/index.html">
+<meta property="og:title" content="微博脚本">
+<meta property="og:url" content="http://yoursite.com/2017/10/15/weibo/index.html">
 <meta property="og:site_name" content="My own site">
-<meta property="og:description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
+<meta property="og:description" content="恩，慢慢更新，先挖个坑写这个的主要原因是自己的微博被许多卖片的小姐姐们关注了，很恶心，准备一次清理掉  账号密码首先还是老样子，分析一下网站对账号密码的加密操作  老规矩，能从移动端入手就不从PC端入手，但是这次直接从PC入手，手机版微博 当输入完账号按下tab切到密码框时，我们会捕捉到一个get请求，打开看看 https://login.sina.com.cn/sso/prelogin.php?">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-30T15:22:43.685Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/weibocrawl1.jpeg">
+<meta property="og:updated_time" content="2017-10-31T14:58:38.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django中有关视图类的多种写法">
-<meta name="twitter:description" content="在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。 第一种 以方法为基础实现的视图举个例子1url(r&apos;^welcome/$&apos;, views.welcome, name=&quot;welcome&quot;) 这是一行url视图函数，那么在views找一下这个welcome的方法12def welcome(request):    return render(">
+<meta name="twitter:title" content="微博脚本">
+<meta name="twitter:description" content="恩，慢慢更新，先挖个坑写这个的主要原因是自己的微博被许多卖片的小姐姐们关注了，很恶心，准备一次清理掉  账号密码首先还是老样子，分析一下网站对账号密码的加密操作  老规矩，能从移动端入手就不从PC端入手，但是这次直接从PC入手，手机版微博 当输入完账号按下tab切到密码框时，我们会捕捉到一个get请求，打开看看 https://login.sina.com.cn/sso/prelogin.php?">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/weibocrawl1.jpeg">
 
 
 
@@ -152,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/15/weibo/"/>
 
 
 
 
 
-  <title>Django中有关视图类的多种写法 | My own site</title>
+  <title>微博脚本 | My own site</title>
   
 
 
@@ -295,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/Django种有关视图类的多种写法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/15/weibo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Funnnnnny">
@@ -312,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Django中有关视图类的多种写法</h1>
+          <h1 class="post-title" itemprop="name headline">微博脚本</h1>
         
 
         <div class="post-meta">
@@ -324,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T23:35:51+09:00">
-                2017-06-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-15T21:53:06+09:00">
+                2017-10-15
               </time>
             
 
@@ -362,32 +364,57 @@
       
 
       
-        <p>在后台开发的过程中发现有关视图其实是有多种实现方法的，那么今天就来统计一下到底有哪些不同的写法，逐步更新。</p>
-<h2 id="第一种-以方法为基础实现的视图"><a href="#第一种-以方法为基础实现的视图" class="headerlink" title="第一种 以方法为基础实现的视图"></a>第一种 以方法为基础实现的视图</h2><p>举个例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">r'^welcome/$'</span>, views.welcome, name=<span class="string">"welcome"</span>)</div></pre></td></tr></table></figure></p>
-<p>这是一行url视图函数，那么在views找一下这个welcome的方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">welcome</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'welcome.html'</span>)</div></pre></td></tr></table></figure></p>
-<p>这里返回了一个render，启动服务之后可以看见返回的是welcome.html的页面<br>复杂一点，如何去实现某些功能或是请求呢？例如实现一个接口函数。看下面的代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">r'^form/$'</span>, views.formmanage, name=<span class="string">"formmanage"</span>),</div></pre></td></tr></table></figure>
-<p>同样寻找一下他的views函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">activity = Activity_act()</div><div class="line">uid = request.session[<span class="string">'login'</span>]</div><div class="line">form = activity.allActivity()</div><div class="line"><span class="keyword">return</span> render(request, <span class="string">'adminapp/biaodan-list.html'</span>,</div><div class="line">              &#123;<span class="string">"activity"</span>: form,&#125;)</div></pre></td></tr></table></figure></p>
-<p>上图中的Activity_act是一个方法包中的某个方法，从返回值可以看出返回了form并将form传递在了render中，那么我们在调用网页的时候就可以通过template语句去调用form，具体的template的写法可以见其他文章，这就是一个以方法为基础实现的网页架构</p>
-<p>下面我们再看看第二种写法</p>
-<h2 id="第二种-基于视图View本身的写法"><a href="#第二种-基于视图View本身的写法" class="headerlink" title="第二种 基于视图View本身的写法"></a>第二种 基于视图View本身的写法</h2><p><a href="https://docs.djangoproject.com/en/dev/ref/class-based-views/base/" target="_blank" rel="external">Django官方文档</a></p>
-<p>在文档中介绍了以下几种View</p>
-<p>View</p>
+        <p><font color="grey">恩，慢慢更新，先挖个坑<br>写这个的主要原因是自己的微博被许多卖片的小姐姐们关注了，很恶心，准备一次清理掉</font></p>
 <blockquote>
-<p>View是一种基础视图，常见写法为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyView</span><span class="params">(View)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, request, *args, **kwargs)</span>:</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">'Hello, World!'</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="账号密码"><a href="#账号密码" class="headerlink" title="账号密码"></a>账号密码</h2><p>首先还是老样子，分析一下网站对账号密码的加密操作</p>
 </blockquote>
-<p>在url中的话这种实现通过View的as_view()函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">'^myview'</span>, Myview.as_view(), name=<span class="string">'我的视图'</span>)</div></pre></td></tr></table></figure></p>
-<p>另外在View中提供了几个配置用的函数，在连接中有详解，这里就不细说了<br>当对myview进行get请求时就会返回Hello World的http形式的response<br>那么在django中他已经为我们封装好了其他许多好用的视图</p>
-<p>Template_View</p>
-<blockquote>
-<p>Template_View顾名思义是一种模板类的视图，常见写法为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.views.generic.base <span class="keyword">import</span> TemplateView</div><div class="line"></div><div class="line"><span class="keyword">from</span> articles.models <span class="keyword">import</span> Article</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomePageView</span><span class="params">(TemplateView)</span>:</span></div><div class="line"></div><div class="line">    template_name = <span class="string">"home.html"</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_context_data</span><span class="params">(self, **kwargs)</span>:</span></div><div class="line">        context = super().get_context_data(**kwargs)</div><div class="line">        context[<span class="string">'latest_articles'</span>] = Article.objects.all()[:<span class="number">5</span>]</div><div class="line">        <span class="keyword">return</span> context</div></pre></td></tr></table></figure></p>
+<p>老规矩，能从移动端入手就不从PC端入手，但是这次直接从PC入手，<a href="weibo.com">手机版微博</a></p>
+<p>当输入完账号按下tab切到密码框时，我们会捕捉到一个get请求，打开看看</p>
+<p><a href="https://login.sina.com.cn/sso/prelogin.php?checkpin=1&amp;entry=mweibo&amp;su=MTU2MDYxMzAwMDk=&amp;callback=jsonpcallback1508381565848" target="_blank" rel="external">https://login.sina.com.cn/sso/prelogin.php?checkpin=1&amp;entry=mweibo&amp;su=MTU2MDYxMzAwMDk=&amp;callback=jsonpcallback1508381565848</a></p>
+<p><img src="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/weibocrawl1.jpeg" alt="Aaron Swartz"></p>
+<pre><code>0
+</code></pre><p>servertime</p>
+<pre><code>1508381509
+</code></pre><p>pcid</p>
+<pre><code>&quot;tc-f85808f34da5621cedf8bd9170eae0006ce2&quot;
+</code></pre><p>nonce</p>
+<pre><code>&quot;BR74OK&quot;
+</code></pre><p>pubkey</p>
+<pre><code>&quot;-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrKjhWhmGIf6GAvdtcq9XyHHv9WcCQyy0kWoesJTBiiCcpKT5VBjUFCOf5qju3f0MzIxSQ+RX21jxV/i8IpJs1P0RK05k8rMAtt4Sru45CqbG7//s4vhjXjoeg5Bubj3OpKO4MzuH2c5iEuXd+T+noihu+SVknrEp5mzGB1kQkQwIDAQAB-----END PUBLIC KEY-----&quot;
+</code></pre><p>rsakv</p>
+<pre><code>&quot;1330428213&quot;
+</code></pre><p>is_openlock</p>
+<pre><code>0
+</code></pre><p>lm</p>
+<pre><code>1
+</code></pre><p>smsurl</p>
+<pre><code>&quot;https://login.sina.com.cn/sso/msglogin?entry=mweibo&amp;mobile=15606130009&amp;s=2ae11f76e8865a2a07492ed2dbab69f6&quot;
+</code></pre><p>showpin</p>
+<pre><code>0
+</code></pre><p>exectime</p>
+<pre><code>9
+</code></pre><blockquote>
+<p>这么看好像也挺清晰的，就是占空间了点-，-<br>挨个分析一下，retcode毫无疑问是返回的状态值，servertime顾名思义是时间，对这个敏感的同学应该发现这是一个去除小数点的时间戳，即time.time()*1000</p>
 </blockquote>
-<p>依次看一下代码，首先template_name就是模板的名字，也就会在当前项目的statics下找到home.html进行直接渲染，不需要我们去返回某个render对网页进行渲染，接下来的get_context_data则是一个获取属性值的方法，同样只需要写个方法就可以在前端页面中自动获取到context这个属性值，是不是特别的方便呢？当然了，Template是继承于View的方法，所以所有View的配置他也可以使用</p>
-<p>RedirectView</p>
-<blockquote>
-<p>RedirectView是一种重定向用的视图，暂时还没有用到，所以先不提，之后补充一下有关View的几种配置方法与特殊的写法</p>
-</blockquote>
-<p><font size="15">Thanks</font></p>
+<p>中间几个后面会用到，这边先不说，showpin是对验证码是否弹出的一个设定，前两天测试的时候总是会弹出一个验证码图片，即showpin=0，今天测试的时候不知道为什么这个值变成了0，即没有验证码，不清楚触发的条件是什么</p>
+<p>再对域名传过去的值进行分析</p>
+<p>checkpin=1&amp;entry=mweibo&amp;su=MTU2MDYxMzAwMDk=&amp;callback=jsonpcallback1508381565848</p>
+<p>checkpin应该是检验是否请求验证码的值（猜测），entry入口是手机版微博，callback即我们上面截图里的json串，下面就是这个su了</p>
+<p>su是什么值呢，根据我们申请的时间分析，毫无疑问这就是我们的账号进行了加密之后的显示</p>
+<p>在js中寻找一下给账号加密的函数（用mac的同学可以尝试一下Charles，很不错的软件，LInux下不清楚怎么用，所以直接firebug慢慢找了）</p>
+<p>我们在js中找到了这么一句<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">opt.data.su = utf8_to_b64(trim(that.loginName.value));</div></pre></td></tr></table></figure></p>
+<p>OK,这就是对我们用户名的加密的过程了，trim是js包中的一个函数，寻找一下他的定义<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> (!str) ? <span class="string">''</span> : str.toString().replace(<span class="regexp">/^\s+|\s+$/g</span>, <span class="string">''</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>utf8_to_b64即是base64的加密方法</p>
+<p>总结一下我们可以获得<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su = base64.b64encode(urllib.parse.quote_plus(user_name).encode(<span class="string">'utf-8'</span>)).decode(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure></p>
+<p>那么第一个函数可以着手写了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_username</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line"><span class="string">        get legal username</span></div><div class="line"><span class="string">        """</span></div><div class="line">        username_quote = urllib.parse.quote_plus(self.user_name)</div><div class="line">        username_base64 = base64.b64encode(username_quote.encode(<span class="string">"utf-8"</span>))</div><div class="line">        <span class="keyword">return</span> username_base64.decode(<span class="string">"utf-8"</span>)</div></pre></td></tr></table></figure>
+<p>那么用户名获取写完了后面毫无疑问要写密码的加密了</p>
+<p>我们先尝试进行一次登录，看一下到底一次登录post了哪些数据<br>其他就不看了，直接看到了sp，即加密之后的密码，我们拎出来看一下</p>
+<p>b223228fbe8bd7510d338871081ca1e01b346e9ea0c47dff16f7a72432ebac05f3064c65e07d97d1a48d747c4db3b2b0d94e7b109db80f1e9e430a4c2780f8b3e3a721723a30db41c951c03af6ea04d35c6f48e597fbf32e770fe574af1941bf6d3484443d3c83d2114f83d3b649c01d25d57b779efa031169ac880b5ac3e694</p>
+<p>因为看到了rsakv这个列，所以我们几乎可以确定，加密过程中必然有rsa的参与，让我们看看js里能否找到加密的过程</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(me.service)&#123;request.service=me.service&#125;<span class="keyword">if</span>((me.loginType&amp;rsa)&amp;&amp;me.servertime</div><div class="line">&amp;&amp;sinaSSOEncoder&amp;&amp;sinaSSOEncoder.RSAKey)&#123;request.servertime=me.servertime;request.nonce=me.nonce;request</div><div class="line">.pwencode=<span class="string">"rsa2"</span>;request.rsakv=me.rsakv;<span class="keyword">var</span> RSAKey=<span class="keyword">new</span> sinaSSOEncoder.RSAKey();RSAKey.setPublic(me.rsaPubkey</div><div class="line">,<span class="string">"10001"</span>);password=RSAKey.encrypt([me.servertime,me.nonce].join(<span class="string">"\t"</span>)+<span class="string">"\n"</span>+password)&#125;<span class="keyword">else</span>&#123;<span class="keyword">if</span>((me.loginType</div><div class="line">&amp;wsse)&amp;&amp;me.servertime&amp;&amp;sinaSSOEncoder&amp;&amp;sinaSSOEncoder.hex_sha1)&#123;request.servertime=me.servertime;request</div><div class="line">.nonce=me.nonce;request.pwencode=<span class="string">"wsse"</span>;password=sinaSSOEncoder.hex_sha1(<span class="string">""</span>+sinaSSOEncoder.hex_sha1(sinaSSOEncoder</div><div class="line">.hex_sha1(password))+me.servertime+me.nonce)&#125;&#125;request.sp=password;</div></pre></td></tr></table></figure>
+<p>具体在里面就可以找到实现的过程了，那么代码实现我全部丢到github上了，下面拍个链接 </p>
+<p><a href="https://github.com/hwt83525055/weibofans" target="_blank" rel="external">Github-微博脚本</a></p>
 
       
     </div>
@@ -413,8 +440,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Django/" rel="tag"># Django</a>
-          
             <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
@@ -428,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/27/Docker/" rel="next" title="Docker Cloud9">
-                <i class="fa fa-chevron-left"></i> Docker Cloud9
+              <a href="/2017/06/28/Django种有关视图类的多种写法/" rel="next" title="Django中有关视图类的多种写法">
+                <i class="fa fa-chevron-left"></i> Django中有关视图类的多种写法
               </a>
             
           </div>
@@ -437,10 +462,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/15/weibo/" rel="prev" title="微博脚本">
-                微博脚本 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -591,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一种-以方法为基础实现的视图"><span class="nav-number">1.</span> <span class="nav-text">第一种 以方法为基础实现的视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二种-基于视图View本身的写法"><span class="nav-number">2.</span> <span class="nav-text">第二种 基于视图View本身的写法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#账号密码"><span class="nav-number">1.</span> <span class="nav-text">账号密码</span></a></li></ol></div>
             
 
           </div>
