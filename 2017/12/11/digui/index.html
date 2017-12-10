@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -111,20 +111,19 @@
 
 
 
-<meta name="description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
-<meta name="keywords" content="Linux">
+<meta name="description" content="leetcode上看到一题小学时候经常做的题目贴一下原题12345A robot is located at the top-left corner of a m x n grid (marked &amp;apos;Start&amp;apos; in the diagram below).The robot can only move either down or right at any point in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux crontab 详解">
-<meta property="og:url" content="http://yoursite.com/2017/04/26/Linux-crontab-详解/index.html">
+<meta property="og:title" content="尾递归与递归转非递归">
+<meta property="og:url" content="http://yoursite.com/2017/12/11/digui/index.html">
 <meta property="og:site_name" content="My own site">
-<meta property="og:description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
+<meta property="og:description" content="leetcode上看到一题小学时候经常做的题目贴一下原题12345A robot is located at the top-left corner of a m x n grid (marked &amp;apos;Start&amp;apos; in the diagram below).The robot can only move either down or right at any point in">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg">
-<meta property="og:updated_time" content="2017-10-30T14:51:10.377Z">
+<meta property="og:image" content="https://leetcode.com/static/images/problemset/robot_maze.png">
+<meta property="og:updated_time" content="2017-12-10T15:44:20.024Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux crontab 详解">
-<meta name="twitter:description" content="欢迎大家加我的微信因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法 1$ cron status 查询当前crontab的运行状态123$ crontab -e$ crontab -l$ crontab -r 这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分可以看到crontab-ed">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg">
+<meta name="twitter:title" content="尾递归与递归转非递归">
+<meta name="twitter:description" content="leetcode上看到一题小学时候经常做的题目贴一下原题12345A robot is located at the top-left corner of a m x n grid (marked &amp;apos;Start&amp;apos; in the diagram below).The robot can only move either down or right at any point in">
+<meta name="twitter:image" content="https://leetcode.com/static/images/problemset/robot_maze.png">
 
 
 
@@ -154,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/26/Linux-crontab-详解/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/11/digui/"/>
 
 
 
 
 
-  <title>Linux crontab 详解 | My own site</title>
+  <title>尾递归与递归转非递归 | My own site</title>
   
 
 
@@ -297,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/Linux-crontab-详解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/11/digui/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Funnnnnny">
@@ -314,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux crontab 详解</h1>
+          <h1 class="post-title" itemprop="name headline">尾递归与递归转非递归</h1>
         
 
         <div class="post-meta">
@@ -326,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T16:02:27+09:00">
-                2017-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-11T00:10:06+09:00">
+                2017-12-11
               </time>
             
 
@@ -364,14 +363,23 @@
       
 
       
-        <h4 id="欢迎大家加我的微信"><a href="#欢迎大家加我的微信" class="headerlink" title="欢迎大家加我的微信"></a>欢迎大家加我的微信</h4><p>因在应用中要挂项目的脚本所以需要使用到Crontab，所以查了查资料整理了一下crontab的基础使用方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cron status</div></pre></td></tr></table></figure>
-<p>查询当前crontab的运行状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ crontab -e</div><div class="line">$ crontab -l</div><div class="line">$ crontab -r</div></pre></td></tr></table></figure></p>
-<p>这个则是对crontab 脚本的 edit， list, remove  ，crontab功能的主题部分<br><img src="https://raw.githubusercontent.com/hwt83525055/PhotoSource/master/Crontab_1.jpg" alt="Aaron Swartz"><br>可以看到crontab-edit中的每一行记录由以下几个部分组成</p>
-<h4 id="分钟-小时-日期-周-Act"><a href="#分钟-小时-日期-周-Act" class="headerlink" title="分钟 小时 日期 周 Act"></a>分钟 小时 日期 周 Act</h4><p> 这个应该很好理解， 即在某日期周几某小时某分钟 执行某操作,值得注意的是一般在command中我们需要使用的是绝对地址<br> | 字段名称        | 说明         | 取值范围  |<br>|:—|:—:|:—:|<br>| 分钟      | 每小时的第几分钟执行 | 0-59 |<br>| 小时    | 每日的第几个小时执行 |0-23|<br>| 日期 | 每月的第几天执行 | 1-31 |<br>|月历 |每年的第几月执行|1-12|<br>|星期|每周的第几天执行|0-6|</p>
-<h3 id="特殊的字符含义"><a href="#特殊的字符含义" class="headerlink" title="特殊的字符含义"></a>特殊的字符含义</h3><p>在crontab中常用的几个特殊字符<br>| 字段名称        | 说明    |<br>|:—:|:—:|<br>|s| 表示任何时刻|<br>|-|表示一个段|<br>|,|表示分割|<br>|/n|表示每个n的单位执行一次，可以写成1-23/1.|</p>
-<h3 id="服务的启动"><a href="#服务的启动" class="headerlink" title="服务的启动"></a>服务的启动</h3><p>想控制crontab的运行状态依靠以下几个命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">service cron start</div><div class="line">service cron stop</div><div class="line">service cron restart</div></pre></td></tr></table></figure></p>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>有关crontab的log一般都存储在/var/log/cron.log 这个文件里，自行查看即可</p>
+        <p>leetcode上看到一题小学时候经常做的题目<br><br>贴一下原题<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">A robot is located at the top-left corner of a m x n grid (marked &apos;Start&apos; in the diagram below).</div><div class="line"></div><div class="line">The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &apos;Finish&apos; in the diagram below).</div><div class="line"></div><div class="line">How many possible unique paths are there?</div></pre></td></tr></table></figure></p>
+<p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="leetcode"><br></p>
+<ul>
+<li>大家在小时候应该或多或少见过类似的题目，我们的处理方法一般就是将每一个格子的可能路径数写出来，每一个格子的可能路径数由他左边和上边的两个格子的可能路径数相加而成。<br></li>
+<li>我们很容易就会联想到递归，因为他的函数式就是一个标准的递归方程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">f(x, y) = f(x-1, y) + f(x, y-1)    x&gt;1, y&gt;1,</div><div class="line">f(x, y) = 1 x == 1 or y == 1,</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>so<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">vec</span><span class="params">(<span class="keyword">int</span> x , <span class="keyword">int</span> y)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span> (x == <span class="number">1</span> || y == <span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> vec(x<span class="number">-1</span>, y), vec(x, y<span class="number">-1</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>很明显这个方法是没法通过的~<br><br>题目本身 没什么难点，我们只要换用循环做这个问题就迎刃而解了<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">uniquePaths</span><span class="params">(self, m, n)</span>:</span></div><div class="line">        <span class="keyword">if</span> m == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> </div><div class="line">        ans  = [[<span class="number">1</span> <span class="keyword">for</span> d <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>)]]</div><div class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, m):</div><div class="line">            ans.append([<span class="number">1</span>])</div><div class="line">            <span class="keyword">for</span> r <span class="keyword">in</span> range(<span class="number">1</span>, n):</div><div class="line">                ans[k].append(ans[k<span class="number">-1</span>][r]+ans[k][r<span class="number">-1</span>])</div><div class="line">        <span class="keyword">return</span> ans[m<span class="number">-1</span>][n<span class="number">-1</span>]</div></pre></td></tr></table></figure></p>
+<p>那么我们需要研究的是，为什么算法是相同的，效率相差这么大呢？<br><br>首先介绍一下尾递归的概念<br></p>
+<h2 id="尾递归"><a href="#尾递归" class="headerlink" title="尾递归"></a>尾递归</h2><ul>
+<li>如果一个函数中所有递归形式的调用都出现在函数的末尾，我们称这个递归函数是尾递归的。当递归调用是整个函数体中最后执行的语句且它的返回值不属于表达式的一部分时，这个递归调用就是尾递归</li>
+</ul>
+<p>举个例子，斐波那契数列<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> Feb(n<span class="number">-1</span>) + Feb(n<span class="number">-2</span>)</div></pre></td></tr></table></figure></p>
+<p>这是常规递归</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb2</span><span class="params">(a, b, n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> a</div><div class="line">    <span class="keyword">return</span> Feb2(a+b, a, n<span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<p>这是尾递归</p>
 
       
     </div>
@@ -395,12 +403,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-        </div>
-      
 
       
       
@@ -410,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/21/jingdong/" rel="next" title="京东商品Crawl">
-                <i class="fa fa-chevron-left"></i> 京东商品Crawl
+              <a href="/2017/10/15/weibo/" rel="next" title="微博脚本">
+                <i class="fa fa-chevron-left"></i> 微博脚本
               </a>
             
           </div>
@@ -419,10 +421,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/27/Docker/" rel="prev" title="Docker Cloud9">
-                Docker Cloud9 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#欢迎大家加我的微信"><span class="nav-number">1.</span> <span class="nav-text">欢迎大家加我的微信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分钟-小时-日期-周-Act"><span class="nav-number">2.</span> <span class="nav-text">分钟 小时 日期 周 Act</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊的字符含义"><span class="nav-number"></span> <span class="nav-text">特殊的字符含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务的启动"><span class="nav-number"></span> <span class="nav-text">服务的启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日志"><span class="nav-number"></span> <span class="nav-text">日志</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#尾递归"><span class="nav-number">1.</span> <span class="nav-text">尾递归</span></a></li></ol></div>
             
 
           </div>

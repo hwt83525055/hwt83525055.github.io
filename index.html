@@ -294,6 +294,142 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/11/digui/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Funnnnnny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My own site">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/11/digui/" itemprop="url">尾递归与递归转非递归</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-11T00:10:06+09:00">
+                2017-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>leetcode上看到一题小学时候经常做的题目<br><br>贴一下原题<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">A robot is located at the top-left corner of a m x n grid (marked &apos;Start&apos; in the diagram below).</div><div class="line"></div><div class="line">The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &apos;Finish&apos; in the diagram below).</div><div class="line"></div><div class="line">How many possible unique paths are there?</div></pre></td></tr></table></figure></p>
+<p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="leetcode"><br></p>
+<ul>
+<li>大家在小时候应该或多或少见过类似的题目，我们的处理方法一般就是将每一个格子的可能路径数写出来，每一个格子的可能路径数由他左边和上边的两个格子的可能路径数相加而成。<br></li>
+<li>我们很容易就会联想到递归，因为他的函数式就是一个标准的递归方程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">f(x, y) = f(x-1, y) + f(x, y-1)    x&gt;1, y&gt;1,</div><div class="line">f(x, y) = 1 x == 1 or y == 1,</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>so<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">vec</span><span class="params">(<span class="keyword">int</span> x , <span class="keyword">int</span> y)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span> (x == <span class="number">1</span> || y == <span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> vec(x<span class="number">-1</span>, y), vec(x, y<span class="number">-1</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>很明显这个方法是没法通过的~<br><br>题目本身 没什么难点，我们只要换用循环做这个问题就迎刃而解了<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">uniquePaths</span><span class="params">(self, m, n)</span>:</span></div><div class="line">        <span class="keyword">if</span> m == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> </div><div class="line">        ans  = [[<span class="number">1</span> <span class="keyword">for</span> d <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>)]]</div><div class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, m):</div><div class="line">            ans.append([<span class="number">1</span>])</div><div class="line">            <span class="keyword">for</span> r <span class="keyword">in</span> range(<span class="number">1</span>, n):</div><div class="line">                ans[k].append(ans[k<span class="number">-1</span>][r]+ans[k][r<span class="number">-1</span>])</div><div class="line">        <span class="keyword">return</span> ans[m<span class="number">-1</span>][n<span class="number">-1</span>]</div></pre></td></tr></table></figure></p>
+<p>那么我们需要研究的是，为什么算法是相同的，效率相差这么大呢？<br><br>首先介绍一下尾递归的概念<br></p>
+<h2 id="尾递归"><a href="#尾递归" class="headerlink" title="尾递归"></a>尾递归</h2><ul>
+<li>如果一个函数中所有递归形式的调用都出现在函数的末尾，我们称这个递归函数是尾递归的。当递归调用是整个函数体中最后执行的语句且它的返回值不属于表达式的一部分时，这个递归调用就是尾递归</li>
+</ul>
+<p>举个例子，斐波那契数列<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> Feb(n<span class="number">-1</span>) + Feb(n<span class="number">-2</span>)</div></pre></td></tr></table></figure></p>
+<p>这是常规递归</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb2</span><span class="params">(a, b, n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> a</div><div class="line">    <span class="keyword">return</span> Feb2(a+b, a, n<span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<p>这是尾递归</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/15/weibo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1025,7 +1161,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
