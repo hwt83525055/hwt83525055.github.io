@@ -294,6 +294,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/fuck/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Funnnnnny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My own site">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/13/fuck/" itemprop="url">Bitches</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T22:58:04+09:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Fuck-you"><a href="#Fuck-you" class="headerlink" title="Fuck you"></a>Fuck you</h2><ul>
+<li>一个大大的fuck you送给你们<h3 id="Fuck-you-all"><a href="#Fuck-you-all" class="headerlink" title="Fuck you all"></a>Fuck you all</h3></li>
+<li>一个大的fuck you送给所有弱智营销号<br></li>
+<li>另外给刘鑫的律师一个大大的中指，违背协议契约，不配作为人民律师<br></li>
+</ul>
+<p>人们的下限都哪去了？<br>可怕</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/11/digui/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,11 +506,8 @@
 <p>举个例子，斐波那契数列<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> Feb(n<span class="number">-1</span>) + Feb(n<span class="number">-2</span>)</div></pre></td></tr></table></figure></p>
 <p>这是常规递归</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feb2</span><span class="params">(a, b, n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> a</div><div class="line">    <span class="keyword">return</span> Feb2(a+b, a, n<span class="number">-1</span>)</div></pre></td></tr></table></figure>
-<p>这是尾递归</p>
-<p>这两者之间功能是一样的，但是效率却差了好多，表面上可以看出来，一个是每一层调用2次函数，另一个则是一次。那让我们来看一下他的汇编代码有什么差别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">6       &#123;</div><div class="line">   0x0000000000400816 &lt;+0&gt;:     push   rbp</div><div class="line">   0x0000000000400817 &lt;+1&gt;:     mov    rbp,rsp</div><div class="line">   0x000000000040081a &lt;+4&gt;:     push   rbx</div><div class="line">   0x000000000040081b &lt;+5&gt;:     sub    rsp,0x18</div><div class="line">   0x000000000040081f &lt;+9&gt;:     mov    DWORD PTR [rbp-0x14],edi</div><div class="line"></div><div class="line">7       if(n == 1||n == 2)</div><div class="line">   0x0000000000400822 &lt;+12&gt;:    cmp    DWORD PTR [rbp-0x14],0x1</div><div class="line">   0x0000000000400826 &lt;+16&gt;:    je     0x40082e &lt;feb(int)+24&gt;</div><div class="line">   0x0000000000400828 &lt;+18&gt;:    cmp    DWORD PTR [rbp-0x14],0x2</div><div class="line">   0x000000000040082c &lt;+22&gt;:    jne    0x400835 &lt;feb(int)+31&gt;</div><div class="line"></div><div class="line">8       &#123;</div><div class="line">9       return 1;</div><div class="line">   0x000000000040082e &lt;+24&gt;:    mov    eax,0x1</div><div class="line">   0x0000000000400833 &lt;+29&gt;:    jmp    0x400853 &lt;feb(int)+61&gt;</div><div class="line"></div><div class="line">10      &#125;</div><div class="line">11      else</div><div class="line">12      &#123;</div><div class="line">13      return feb(n-1) + feb(n-2);</div><div class="line">   0x0000000000400835 &lt;+31&gt;:    mov    eax,DWORD PTR [rbp-0x14]</div><div class="line">   0x0000000000400838 &lt;+34&gt;:    sub    eax,0x1</div><div class="line">   0x000000000040083b &lt;+37&gt;:    mov    edi,eax</div><div class="line">   0x000000000040083d &lt;+39&gt;:    call   0x400816 &lt;feb(int)&gt;</div><div class="line">   0x0000000000400842 &lt;+44&gt;:    mov    ebx,eax</div><div class="line">   0x0000000000400844 &lt;+46&gt;:    mov    eax,DWORD PTR [rbp-0x14]</div><div class="line">   0x0000000000400847 &lt;+49&gt;:    sub    eax,0x2</div><div class="line">   0x000000000040084a &lt;+52&gt;:    mov    edi,eax</div><div class="line">   0x000000000040084c &lt;+54&gt;:    call   0x400816 &lt;feb(int)&gt;</div><div class="line">   0x0000000000400851 &lt;+59&gt;:    add    eax,ebx</div><div class="line"></div><div class="line">14      &#125;</div><div class="line">15      &#125;</div><div class="line">   0x0000000000400853 &lt;+61&gt;:    add    rsp,0x18</div><div class="line">   0x0000000000400857 &lt;+65&gt;:    pop    rbx</div><div class="line">   0x0000000000400858 &lt;+66&gt;:    pop    rbp</div><div class="line">   0x0000000000400859 &lt;+67&gt;:    ret</div></pre></td></tr></table></figure></p>
-<p>这是普通递归</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">6       &#123;</div><div class="line">   0x0000000000400816 &lt;+0&gt;:     push   rbp</div><div class="line">   0x0000000000400817 &lt;+1&gt;:     mov    rbp,rsp</div><div class="line">   0x000000000040081a &lt;+4&gt;:     sub    rsp,0x10</div><div class="line">   0x000000000040081e &lt;+8&gt;:     mov    DWORD PTR [rbp-0x4],edi</div><div class="line">   0x0000000000400821 &lt;+11&gt;:    mov    DWORD PTR [rbp-0x8],esi</div><div class="line">   0x0000000000400824 &lt;+14&gt;:    mov    DWORD PTR [rbp-0xc],edx</div><div class="line"></div><div class="line">7       if(n == 2)</div><div class="line">   0x0000000000400827 &lt;+17&gt;:    cmp    DWORD PTR [rbp-0xc],0x2</div><div class="line">   0x000000000040082b &lt;+21&gt;:    jne    0x400832 &lt;feb(int, int, int)+28&gt;</div><div class="line"></div><div class="line">8       &#123;</div><div class="line">9       return a;</div><div class="line">   0x000000000040082d &lt;+23&gt;:    mov    eax,DWORD PTR [rbp-0x4]</div><div class="line">   0x0000000000400830 &lt;+26&gt;:    jmp    0x40084c &lt;feb(int, int, int)+54&gt;</div><div class="line"></div><div class="line">10      &#125;</div><div class="line">11      else</div><div class="line">12      &#123;</div><div class="line">13      return feb(a+b, a, n-1);</div><div class="line">   0x0000000000400832 &lt;+28&gt;:    mov    eax,DWORD PTR [rbp-0xc]</div><div class="line">   0x0000000000400835 &lt;+31&gt;:    lea    edx,[rax-0x1]</div><div class="line">   0x0000000000400838 &lt;+34&gt;:    mov    ecx,DWORD PTR [rbp-0x4]</div><div class="line">   0x000000000040083b &lt;+37&gt;:    mov    eax,DWORD PTR [rbp-0x8]</div><div class="line">   0x000000000040083e &lt;+40&gt;:    add    ecx,eax</div><div class="line">   0x0000000000400840 &lt;+42&gt;:    mov    eax,DWORD PTR [rbp-0x4]</div><div class="line">   0x0000000000400843 &lt;+45&gt;:    mov    esi,eax</div><div class="line">   0x0000000000400845 &lt;+47&gt;:    mov    edi,ecx</div><div class="line">   0x0000000000400847 &lt;+49&gt;:    call   0x400816 &lt;feb(int, int, int)&gt;</div><div class="line"></div><div class="line">14      &#125;</div><div class="line">15      &#125;</div><div class="line">   0x000000000040084c &lt;+54&gt;:    leave</div><div class="line">   0x000000000040084d &lt;+55&gt;:    ret</div></pre></td></tr></table></figure>
-<p>这是尾递归<br>可以看到，虽然多用了2个形参，但是是编码的空间却缩小了，在主功能部分更是少了一次call，所以实际上尾递归的方法所占的内存或者是运行的速度都是远优于普通递归的，那么是否所有的递归都可以转化为普通递归呢？<br><br>回到我们一开始提出的问题，一个二元的函数式</p>
+<p>当然了。。python对尾递归没有优化，逻辑是这样的。<br>比如erlang语言这类严重依赖递归的编程语言，对尾递归会优化为只占一位，具体的代码实现就不演示了。<br></p>
+<p>【突然看到一个python的‘尾递归’优化】分享一下吧<br><br>将return换成yield，则返回一个迭代器，可以突破1000的栈长限制，不过这在本质上与尾递归优化是不同的。</p>
 
           
         
@@ -1165,7 +1287,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
